@@ -1,0 +1,12 @@
+{
+	"scripts": {
+		"test": "deno test --import-map=import-map.json --allow-read --allow-write --allow-run test",
+		"install-to-path": "deno install --import-map=import-map.json --allow-read --allow-write --allow-run --name create-mono-repo ./bin.ts",
+		"lint": "eslint .",
+		"precommit": "npm test && npm run lint"
+	},
+	"devDependencies": {
+		"@wvbe/eslint-config": "github:wvbe/eslint-config#master",
+		"eslint": "^8.16.0"
+	}
+}
